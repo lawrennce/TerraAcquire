@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Net.WebSockets;
 
-namespace NeilMacabulos.Finals_.Pages
+namespace TerraAquire.Web.Pages
 {
     public class Index : PageModel
     {

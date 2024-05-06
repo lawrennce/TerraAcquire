@@ -15,4 +15,8 @@
     <ProjectReference Include="..\TerraAquire.Data\TerraAquire.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Common\" />
+  </ItemGroup>
+
 </Project>

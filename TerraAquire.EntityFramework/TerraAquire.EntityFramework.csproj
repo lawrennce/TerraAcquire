@@ -12,7 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ECommerce.Data\TerraAquire.Data.csproj" />
+
+    <ProjectReference Include="..\TerraAquire.Data\TerraAquire.Data.csproj" />
   </ItemGroup>
 
 </Project>

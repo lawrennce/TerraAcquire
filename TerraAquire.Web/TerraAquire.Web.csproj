@@ -18,11 +18,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ECommerce.Services\TerraAquire.Services.csproj" />
+    <Folder Include="Pages\Account\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Account\" />
+    <ProjectReference Include="..\TerraAquire.Contracts\TerraAquire.Contracts.csproj" />
+    <ProjectReference Include="..\TerraAquire.Services\TerraAquire.Services.csproj" />
   </ItemGroup>
 
 </Project>

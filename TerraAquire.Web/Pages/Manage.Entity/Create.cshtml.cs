@@ -1,4 +1,4 @@
-using TerraAquire.Contracts.Common;
+using TerraAquire.Contracts;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;

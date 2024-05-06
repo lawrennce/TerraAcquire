@@ -11,8 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ECommerce.Contracts\TerraAquire.Contracts.csproj" />
-    <ProjectReference Include="..\ECommerce.SqlServer\TerraAquire.MySql.csproj" />
+
+    <ProjectReference Include="..\TerraAquire.Contracts\TerraAquire.Contracts.csproj" />
+    <ProjectReference Include="..\TerraAquire.SqlServer\TerraAquire.MySql.csproj" />
   </ItemGroup>
 
 </Project>

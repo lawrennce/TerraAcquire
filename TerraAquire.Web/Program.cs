@@ -1,5 +1,4 @@
 using TerraAquire.Contracts;
-using TerraAquire.Contracts.Categories;
 using TerraAquire.EntityFramework;
 using TerraAquire.MySql.Infrastructure;
 using TerraAquire.Services;

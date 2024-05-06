@@ -1,5 +1,4 @@
-using TerraAquire.Contracts.Common;
-using TerraAquire.Contracts.Categories;
+using TerraAquire.Contracts;
 using TerraAquire.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
