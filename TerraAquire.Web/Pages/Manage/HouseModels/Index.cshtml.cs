@@ -3,39 +3,25 @@ using TerraAquire.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using TerraAquire.Contracts.HouseModels;
 
-namespace TerraAquire.Web.Pages.Manage.Entity
+namespace TerraAquire.Web.Pages.Manage.HouseModels
 {
     public class Index : PageModel
     {
-        private readonly ILogger<Index> _logger;
-        private readonly IEntityService _entityService;
+        public readonly IHouseModelService _houseModelService;
 
-        [BindProperty]
-        public ViewModel Data { get; set; }
-        public Index(ILogger<Index> logger, IEntityService entityService)
+        public Index(IHouseModelService houseModelService)
         {
-            _logger = logger;
-            _entityService = entityService;
-
-            Data = Data ?? new ViewModel();
+            _houseModelService = houseModelService;
+        }
+        public async Task OnGet(bool? isActive = true, int? pageIndex = 1, int? pageSize = 10, string? keyword = "")
+        {
+            HouseModels = await _houseModelService.Search(isActive, pageIndex, pageSize, keyword);
         }
 
-        public void OnGet(int? pageIndex = 1, int? pageSize = 10, string? sortBy = "", string? keyword = "")
-        {
-            Data.Entity = _entityService.Search(pageIndex, pageSize, sortBy, keyword);
-        }
+        public Paged<HouseModelDto>? HouseModels { get; set; }
 
-        public class ViewModel
-        {
-     
-            public string? Entity { get; set; }
-            public string? Items { get; set; }
-        }
     }
 
-    public interface IEntityService
-    {
-        string? Search(int? pageIndex, int? pageSize, string? sortBy, string? keyword);
-    }
 }

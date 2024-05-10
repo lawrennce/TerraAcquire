@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TerraAquire.Data
 {
-    public class TrippingCustomers
+    public class TrippingCustomer
     {
         public Guid? TrippingId { get; set; }
         public Guid? CustomerId { get; set; }

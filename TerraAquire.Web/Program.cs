@@ -5,6 +5,7 @@ using TerraAquire.Services;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Runtime.CompilerServices;
+using TerraAquire.Services.Common;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,7 +24,9 @@ builder.Services.AddDbContext<DefaultDbContext>(dbContextOptions => dbContextOpt
                .EnableSensitiveDataLogging()
                .EnableDetailedErrors()
 );
-
+builder.Services.AddDataRepositories();
+builder.Services.AddServices();
+builder.Services.AddAutoMapper(typeof(Program), typeof(IService));
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 builder.Services.AddSession(options =>
