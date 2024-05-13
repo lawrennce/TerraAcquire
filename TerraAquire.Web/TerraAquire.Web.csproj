@@ -7,16 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Pages\Manage\TrippingCustomers\**" />
     <Compile Remove="Pages\Manage\Trippings\**" />
     <Compile Remove="Pages\Manage\Users\**" />
-    <Content Remove="Pages\Manage\TrippingCustomers\**" />
     <Content Remove="Pages\Manage\Trippings\**" />
     <Content Remove="Pages\Manage\Users\**" />
-    <EmbeddedResource Remove="Pages\Manage\TrippingCustomers\**" />
     <EmbeddedResource Remove="Pages\Manage\Trippings\**" />
     <EmbeddedResource Remove="Pages\Manage\Users\**" />
-    <None Remove="Pages\Manage\TrippingCustomers\**" />
     <None Remove="Pages\Manage\Trippings\**" />
     <None Remove="Pages\Manage\Users\**" />
   </ItemGroup>
@@ -50,6 +46,10 @@
 
   <ItemGroup>
     <None Include="Pages\Manage\HouseModels\Index.cshtml" />
+    <None Include="Pages\Manage\TrippingCustomers\Create.cshtml" />
+    <None Include="Pages\Manage\TrippingCustomers\Delete.cshtml" />
+    <None Include="Pages\Manage\TrippingCustomers\Index.cshtml" />
+    <None Include="Pages\Manage\TrippingCustomers\Update.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
