@@ -8,11 +8,9 @@ namespace TerraAquire.EntityFramework
 {
     public class DefaultDbContext : DbContext
     {
-        public List<TrippingCustomer> trippingCustomers;
-
         public DbSet<HouseModel>? HouseModels { get; set; }
         public DbSet<TrippingCustomer>? TrippingCustomers { get; set; }
-        public  DbSet<Tripping>? Tripping {  get; set; }
+        public  DbSet<Tripping>? Trippings {  get; set; }
         public DbSet<User>? Users { get; set; }
         public DefaultDbContext(DbContextOptions options)
 
@@ -20,7 +18,6 @@ namespace TerraAquire.EntityFramework
         {
 
         }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             List<HouseModel>? houseModels = new List<HouseModel>()
