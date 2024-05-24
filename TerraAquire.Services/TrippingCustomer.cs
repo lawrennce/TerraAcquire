@@ -1,32 +1,27 @@
 ﻿using AutoMapper;
-using TerraAquire.Contracts;
-using TerraAquire.Contracts.HouseModels;
-using TerraAquire.Data;
-using TerraAquire.Services.Common;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
+using TerraAquire.Contracts.TrippingCustomers;
+using TerraAquire.Contracts;
+using TerraAquire.Services.Common;
+using TerraAquire.Data;
 
 namespace TerraAquire.Services
 {
-    public class HouseModelService : BaseService, IHouseModelService
+    public class TrippingCustomerService : BaseService, ITrippingCustomerService
     {
-        private readonly IRepository<HouseModel> _houseModelRepository;
-        public HouseModelService(IConfiguration configuration, ILogger<BaseService> logger, IMapper mapper,
-              IRepository<HouseModel> houseModelRepository
+        private readonly IRepository<TrippingCustomer> _trippingCustomerRepository;
+        public TrippingCustomerService(IConfiguration configuration, ILogger<BaseService> logger, IMapper mapper,
+              IRepository<TrippingCustomer> trippingCustomerRepository
         )
             : base(configuration, logger, mapper)
         {
-            _houseModelRepository = houseModelRepository;
+            _trippingCustomerRepository = trippingCustomerRepository;
         }
 
         //public async Task<OperationDto<SchoolPostDto>>? Create(CreateDto? dto)
@@ -254,15 +249,14 @@ namespace TerraAquire.Services
         //    return result;
         //}
 
-        public async Task<Paged<HouseModelDto>>? Search(bool? isActive = true, int? pageIndex = 1, int? pageSize = 10, string? keyword = "")
+        public async Task<Paged<TrippingCustomerDto>>? Search(bool? isActive = true, int? pageIndex = 1, int? pageSize = 10, string? keyword = "")
         {
-            var query = _houseModelRepository.All().AsQueryable();
+            var query = _trippingCustomerRepository.All().AsQueryable();
 
             if (!string.IsNullOrEmpty(keyword))
             {
-                query = _houseModelRepository.All()
-
-                         .Where(a => a.Name != null && a.Name.ToLower().Contains(keyword.ToLower()));
+                query = _trippingCustomerRepository.All()
+                            .Where(a => a.Customer!.FullName != null && a.Customer.FullName.ToLower().Contains(keyword.ToLower()));
             }
 
             query = query.Where(a => a.IsActive == isActive);
@@ -271,9 +265,9 @@ namespace TerraAquire.Services
             var skip = ((pageIndex - 1) * pageSize)!.Value;
             var list = query.Skip(skip).Take(pageSize!.Value).ToList();
 
-            var result = Mapper.Map<List<HouseModelDto>>(list);
+            var result = Mapper.Map<List<TrippingCustomerDto>>(list);
 
-            return new Paged<HouseModelDto>()
+            return new Paged<TrippingCustomerDto>()
             {
                 PageIndex = pageIndex.Value,
                 PageSize = pageSize.Value,

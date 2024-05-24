@@ -17,7 +17,6 @@
 
   <ItemGroup>
     <Folder Include="Common\" />
-    <Folder Include="TrippingCustomers\" />
   </ItemGroup>
 
 </Project>

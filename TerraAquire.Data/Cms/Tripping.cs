@@ -10,6 +10,7 @@ namespace TerraAquire.Data
     {
         public Guid? Id { get; set; }
         public Guid? AgentId { get; set; }
+        public User? Agent { get; set; }
         public DateTime? DateTime { get; set; }
     }
 }
