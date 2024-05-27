@@ -79,7 +79,7 @@ namespace TerraAquire.EntityFramework
                 new Tripping()
                 {
                    Id = Guid.Parse("0276a4b7-6f0b-4e5e-af54-51382e92216f"),
-                   AgentId = Guid.Parse("64d81333-8fef-49d3-8907-a1dd8784d74c"),
+                   AgentId = Guid.Parse("bb7fbc7d-1e9e-4a3b-9902-a30605edd9e0"),
                    DateTime = DateTime.Parse("22/05/2024"),
                 }
             };
@@ -88,8 +88,9 @@ namespace TerraAquire.EntityFramework
             {
                 new TrippingCustomer()
                 {
-                   TrippingId = Guid.Parse("99ff03cb-a690-4c32-b59d-cc3c177d8300"),
-                   CustomerId =  Guid.Parse("8062298a-f8a9-4a1a-a0bb-6ba65232b794"),
+                   Id = Guid.Parse("8c4bb8af-0d01-444d-9c34-530a933e01c8"),
+                    TrippingId = Guid.Parse("0276a4b7-6f0b-4e5e-af54-51382e92216f"),
+                   CustomerId =  Guid.Parse("84adfe15-1c72-44af-a52d-140ae13dd6ac"),
                 },
                 //new HouseModel()
                 //{
