@@ -7,23 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Pages\Manage\Trippings\**" />
-    <Compile Remove="Pages\Manage\Users\**" />
-    <Content Remove="Pages\Manage\Trippings\**" />
-    <Content Remove="Pages\Manage\Users\**" />
-    <EmbeddedResource Remove="Pages\Manage\Trippings\**" />
-    <EmbeddedResource Remove="Pages\Manage\Users\**" />
-    <None Remove="Pages\Manage\Trippings\**" />
-    <None Remove="Pages\Manage\Users\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Remove="Pages\Manage\HouseModels\Create.cshtml.cs" />
     <Compile Remove="Pages\Manage\HouseModels\Delete.cshtml.cs" />
     <Compile Remove="Pages\Manage\HouseModels\Update.cshtml.cs" />
     <Compile Remove="Pages\Manage\TrippingCustomers\Create.cshtml.cs" />
     <Compile Remove="Pages\Manage\TrippingCustomers\Delete.cshtml.cs" />
     <Compile Remove="Pages\Manage\TrippingCustomers\Update.cshtml.cs" />
+    <Compile Remove="Pages\Manage\Trippings\Create.cshtml.cs" />
+    <Compile Remove="Pages\Manage\Trippings\Delete.cshtml.cs" />
+    <Compile Remove="Pages\Manage\Trippings\Update.cshtml.cs" />
+    <Compile Remove="Pages\Manage\Users\Create.cshtml.cs" />
+    <Compile Remove="Pages\Manage\Users\Delete.cshtml.cs" />
+    <Compile Remove="Pages\Manage\Users\Update.cshtml.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,6 +28,12 @@
     <Content Remove="Pages\Manage\TrippingCustomers\Create.cshtml" />
     <Content Remove="Pages\Manage\TrippingCustomers\Delete.cshtml" />
     <Content Remove="Pages\Manage\TrippingCustomers\Update.cshtml" />
+    <Content Remove="Pages\Manage\Trippings\Create.cshtml" />
+    <Content Remove="Pages\Manage\Trippings\Delete.cshtml" />
+    <Content Remove="Pages\Manage\Trippings\Update.cshtml" />
+    <Content Remove="Pages\Manage\Users\Create.cshtml" />
+    <Content Remove="Pages\Manage\Users\Delete.cshtml" />
+    <Content Remove="Pages\Manage\Users\Update.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -53,6 +54,8 @@
   <ItemGroup>
     <None Include="Pages\Manage\HouseModels\Index.cshtml" />
     <None Include="Pages\Manage\TrippingCustomers\Index.cshtml" />
+    <None Include="Pages\Manage\Trippings\Index.cshtml" />
+    <None Include="Pages\Manage\Users\Index.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

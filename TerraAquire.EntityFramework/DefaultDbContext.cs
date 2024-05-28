@@ -29,6 +29,23 @@ namespace TerraAquire.EntityFramework
                     Features = "1 Bathroom, 2 Bedroom, Livingroom, Kitchen, Dinning",
                     Content = "1 Bathroom, two story",
                     IsActive = true,
+                },
+
+                 new HouseModel()
+                {
+                    Id = Guid.Parse("1b917106-b51d-4316-8aaa-26c4068afe87"),
+                    Name = "Model House B",
+                    Features = "2 Bathroom, 2 Bedroom, Livingroom, Kitchen, Dinning",
+                    Content = "1 Bathroom, 2nd floor",
+                    IsActive = true,
+                },
+                  new HouseModel()
+                {
+                    Id = Guid.Parse("74f2c1e9-68c6-43b0-ad9f-9d5bb1e3f0fb"),
+                    Name = "Model House C",
+                    Features = "3 Bathroom, 3 Bedroom, Livingroom, Kitchen, Dinning",
+                    Content = "1 Bathroom, 2nd floor",
+                    IsActive = true,
                 }
             };
             List<User>? user = new List<User>()
@@ -40,7 +57,7 @@ namespace TerraAquire.EntityFramework
                     EmailAddress = "johndaryl@gmail.com",
                     Password = "lawrence",
                     FirstName = "john daryl",
-                    LastName = "uy",
+                    LastName = "love",
                    
                 },
                  new User()
@@ -69,7 +86,7 @@ namespace TerraAquire.EntityFramework
                     Role = Role.Staff,
                     EmailAddress = "justine@gmail.com",
                     Password = "babyjustine",
-                    FirstName = "justine",
+                    FirstName = "justine", 
                     LastName = "pics",
 
                 }
@@ -98,6 +115,7 @@ namespace TerraAquire.EntityFramework
                 //    IsActive = true,
                 //},
             };
+
 
 
             modelBuilder.Entity<HouseModel>().HasData(houseModels);
