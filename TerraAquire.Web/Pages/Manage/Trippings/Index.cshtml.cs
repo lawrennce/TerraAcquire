@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
-namespace TerraAquire.Web.Pages.Manage.tripping
+namespace TerraAquire.Web.Pages.Manage.Trippings
 {
     public class Index : PageModel
     {

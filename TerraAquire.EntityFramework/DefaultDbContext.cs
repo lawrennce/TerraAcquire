@@ -44,7 +44,7 @@ namespace TerraAquire.EntityFramework
                     Id = Guid.Parse("74f2c1e9-68c6-43b0-ad9f-9d5bb1e3f0fb"),
                     Name = "Model House C",
                     Features = "3 Bathroom, 3 Bedroom, Livingroom, Kitchen, Dinning",
-                    Content = "1 Bathroom, 2nd floor",
+                    Content = "3 Bathroom, 2nd floor",
                     IsActive = true,
                 }
             };

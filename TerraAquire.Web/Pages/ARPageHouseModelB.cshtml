@@ -1,6 +1,5 @@
-﻿@page "/ar"
-@model TerraAquire.Web.Pages.ARPageModel
-
+﻿@page "/ar-modelb"
+@model TerraAquire.Web.Pages.ARPageHouseModel2Model
 @{
     Layout = null;
 }
@@ -14,8 +13,8 @@
     <script src="js/simple-ar.min.js"
             onload="onWasmLoaded();"></script>
     <a-scene>
-        <a-entity simple-ar="src: ar_assets/qr.png; minCutOffValue: 1; betaValue:0.1;">
-            <a-entity gltf-model="ar_assets/apple.glb" scale="15 15 15" position="0 0 -1"></a-entity>
+        <a-entity simple-ar="src: ar_assets/GlyphModelB.jpeg; minCutOffValue: 1; betaValue:0.1;">
+            <a-entity gltf-model="ar_assets/modelhouseB.glb" scale="15 15 15" position="0 0 -1"></a-entity>
         </a-entity>
         <a-camera position="0 0 0"></a-camera>
     </a-scene>

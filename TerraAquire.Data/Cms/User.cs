@@ -22,5 +22,7 @@ namespace TerraAquire.Data
              return this.FirstName + " " + this.LastName;
             }
         }
+
+        public bool? IsActive { get; set; }
     }
 }

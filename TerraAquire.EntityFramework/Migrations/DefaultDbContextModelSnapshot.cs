@@ -52,6 +52,22 @@ namespace TerraAquire.EntityFramework.Migrations
                             Features = "1 Bathroom, 2 Bedroom, Livingroom, Kitchen, Dinning",
                             IsActive = true,
                             Name = "Model House A"
+                        },
+                        new
+                        {
+                            Id = new Guid("1b917106-b51d-4316-8aaa-26c4068afe87"),
+                            Content = "1 Bathroom, 2nd floor",
+                            Features = "2 Bathroom, 2 Bedroom, Livingroom, Kitchen, Dinning",
+                            IsActive = true,
+                            Name = "Model House B"
+                        },
+                        new
+                        {
+                            Id = new Guid("74f2c1e9-68c6-43b0-ad9f-9d5bb1e3f0fb"),
+                            Content = "3 Bathroom, 2nd floor",
+                            Features = "3 Bathroom, 3 Bedroom, Livingroom, Kitchen, Dinning",
+                            IsActive = true,
+                            Name = "Model House C"
                         });
                 });
 
@@ -124,6 +140,9 @@ namespace TerraAquire.EntityFramework.Migrations
                     b.Property<string>("FirstName")
                         .HasColumnType("longtext");
 
+                    b.Property<bool?>("IsActive")
+                        .HasColumnType("tinyint(1)");
+
                     b.Property<string>("LastName")
                         .HasColumnType("longtext");
 
@@ -146,7 +165,7 @@ namespace TerraAquire.EntityFramework.Migrations
                             Id = new Guid("7fda491d-6017-445d-ac77-59f87e640778"),
                             EmailAddress = "johndaryl@gmail.com",
                             FirstName = "john daryl",
-                            LastName = "uy",
+                            LastName = "love",
                             Password = "lawrence",
                             Role = 0
                         },

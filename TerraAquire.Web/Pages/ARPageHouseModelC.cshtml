@@ -1,0 +1,22 @@
+﻿@page "/ar-modelc"
+@model TerraAquire.Web.Pages.ARPageHouseModel3Model
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple AR - A Web based AR for A-Frame</title>
+    <script src="js/aframe.min.js"></script>
+</head>
+<body>
+    <script src="js/simple-ar.min.js"
+            onload="onWasmLoaded();"></script>
+    <a-scene>
+        <a-entity simple-ar="src: ar_assets/GlyphModelC.jpeg; minCutOffValue: 1; betaValue:0.1;">
+            <a-entity gltf-model="ar_assets/modelhouseC.glb" scale="15 15 15" position="0 0 -1"></a-entity>
+        </a-entity>
+        <a-camera position="0 0 0"></a-camera>
+    </a-scene>
+</body>
+</html>

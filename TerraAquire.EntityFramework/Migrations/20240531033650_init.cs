@@ -52,7 +52,8 @@ namespace TerraAquire.EntityFramework.Migrations
                     LastName = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     ProfileImage = table.Column<string>(type: "longtext", nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4")
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    IsActive = table.Column<bool>(type: "tinyint(1)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -102,17 +103,22 @@ namespace TerraAquire.EntityFramework.Migrations
             migrationBuilder.InsertData(
                 table: "HouseModels",
                 columns: new[] { "Id", "ARmodel", "Content", "Features", "IsActive", "Name" },
-                values: new object[] { new Guid("91a4e383-5133-4675-ad4e-24ef11bb4c00"), null, "1 Bathroom, two story", "1 Bathroom, 2 Bedroom, Livingroom, Kitchen, Dinning", true, "Model House A" });
+                values: new object[,]
+                {
+                    { new Guid("1b917106-b51d-4316-8aaa-26c4068afe87"), null, "1 Bathroom, 2nd floor", "2 Bathroom, 2 Bedroom, Livingroom, Kitchen, Dinning", true, "Model House B" },
+                    { new Guid("74f2c1e9-68c6-43b0-ad9f-9d5bb1e3f0fb"), null, "3 Bathroom, 2nd floor", "3 Bathroom, 3 Bedroom, Livingroom, Kitchen, Dinning", true, "Model House C" },
+                    { new Guid("91a4e383-5133-4675-ad4e-24ef11bb4c00"), null, "1 Bathroom, two story", "1 Bathroom, 2 Bedroom, Livingroom, Kitchen, Dinning", true, "Model House A" }
+                });
 
             migrationBuilder.InsertData(
                 table: "Users",
-                columns: new[] { "Id", "EmailAddress", "FirstName", "LastName", "Password", "ProfileImage", "Role" },
+                columns: new[] { "Id", "EmailAddress", "FirstName", "IsActive", "LastName", "Password", "ProfileImage", "Role" },
                 values: new object[,]
                 {
-                    { new Guid("1a795efd-c23a-4107-bd34-a0e8910277ab"), "justine@gmail.com", "justine", "pics", "babyjustine", null, 1 },
-                    { new Guid("7fda491d-6017-445d-ac77-59f87e640778"), "johndaryl@gmail.com", "john daryl", "uy", "lawrence", null, 0 },
-                    { new Guid("84adfe15-1c72-44af-a52d-140ae13dd6ac"), "jayroaalma@gmail.com", "jayroa", "alma", "babydave", null, 3 },
-                    { new Guid("bb7fbc7d-1e9e-4a3b-9902-a30605edd9e0"), "neil@gmail.com", "neil", "silvestre", "sigesigesige", null, 2 }
+                    { new Guid("1a795efd-c23a-4107-bd34-a0e8910277ab"), "justine@gmail.com", "justine", null, "pics", "babyjustine", null, 1 },
+                    { new Guid("7fda491d-6017-445d-ac77-59f87e640778"), "johndaryl@gmail.com", "john daryl", null, "love", "lawrence", null, 0 },
+                    { new Guid("84adfe15-1c72-44af-a52d-140ae13dd6ac"), "jayroaalma@gmail.com", "jayroa", null, "alma", "babydave", null, 3 },
+                    { new Guid("bb7fbc7d-1e9e-4a3b-9902-a30605edd9e0"), "neil@gmail.com", "neil", null, "silvestre", "sigesigesige", null, 2 }
                 });
 
             migrationBuilder.InsertData(
