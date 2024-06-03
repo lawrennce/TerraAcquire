@@ -34,6 +34,9 @@
     <Content Remove="Pages\Manage\Users\Create.cshtml" />
     <Content Remove="Pages\Manage\Users\Delete.cshtml" />
     <Content Remove="Pages\Manage\Users\Update.cshtml" />
+    <Content Remove="wwwroot\ar_assets\GlyphModelA.jpeg" />
+    <Content Remove="wwwroot\ar_assets\GlyphModelB.jpeg" />
+    <Content Remove="wwwroot\ar_assets\GlyphModelC.jpeg" />
   </ItemGroup>
 
   <ItemGroup>
