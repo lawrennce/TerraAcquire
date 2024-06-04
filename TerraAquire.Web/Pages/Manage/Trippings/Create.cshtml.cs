@@ -2,40 +2,15 @@ using TerraAquire.Contracts;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using TerraAquire.Data;
 
-namespace TerraAquire.Web.Pages.Manage.Entity
+namespace TerraAquire.Web.Pages.Manage.Trippings
 {
-    public class Create : PageModel
+   public class CreateDto
     {
-        private readonly ILogger<Create> _logger;
-        private readonly IEntityService _entityService;
-        [BindProperty]
-        public ViewModel Data { get; set; }
-        public Create(ILogger<Create> logger, IEntityService entityService)
-        {
-            _logger = logger;
-            _entityService = entityService;
-
-            Data = Data ?? new ViewModel();
-        }
-
-        public void OnGet()
-        {
-
-        }
-
-        public IActionResult OnPost()
-        {
-            if (ModelState.IsValid != true)
-                return Page();
-
-            return RedirectPermanent("~/manage/entity/index");
-        }
-
-        public class ViewModel
-        {
-            public string? Entity { get; set; }
-
-        }
+        public Guid? Id { get; set; }
+        public string? Title { get; set; }
+        public Guid? UserId { get; set; }
+        public string? Content { get; set; }
     }
 }

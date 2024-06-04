@@ -1,5 +1,5 @@
-﻿@page
-@model TerraAquire.Web.Pages.Manage.Entity.Create
+﻿@page 
+@model TerraAquire.Web.Pages.Manage.Trippings
 @{
 }
 
@@ -8,17 +8,17 @@
         @Html.ValidationSummary()
     </div>
     <div class="form-group">
-        <label asp-for="Data.Entity!">Make</label>
-        <input type="text" class="form-control" id="make" aria-describedby="entityMakeHelp" placeholder="Enter make" asp-for="Data.Entity!">
+        <label asp-for="Data.DateTime!">Make</label>
+        <input type="text" class="form-control" id="make" aria-describedby="datetimeMakeHelp" placeholder="Enter make" asp-for="Data.DateTime!">
     </div>
     <div class="form-group">
-        <label asp-for="Data.Entity!">Manufacturer</label>
-        <input type="text" class="form-control" id="manufacturer" aria-describedby="entityManufacturerHelp" placeholder="Enter manufacturer" asp-for="Data.Entity!">
+        <label asp-for="Data.DateTime!">Manufacturer</label>
+        <input type="text" class="form-control" id="manufacturer" aria-describedby="datetimeManufacturerHelp" placeholder="Enter manufacturer" asp-for="Data.DateTime!">
     </div>
     <div class="form-group">
-        <label asp-for="Data.Entity!">Year</label>
-        <input type="text" class="form-control" id="year" aria-describedby="entityYearHelp" placeholder="Enter year" asp-for="Data.Entity!">
+        <label asp-for="Data.DateTime!">Year</label>
+        <input type="text" class="form-control" id="year" aria-describedby="datetimeYearHelp" placeholder="Enter year" asp-for="Data.DateTime!">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
-    <a href="~/manage/entity" class="btn btn-secondary">Back</a>
+    <a href="~/manage/trippings" class="btn btn-secondary">Back</a>
 </form>

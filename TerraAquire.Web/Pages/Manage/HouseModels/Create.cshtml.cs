@@ -3,18 +3,18 @@ using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace TerraAquire.Web.Pages.Manage.Entity
+namespace TerraAquire.Web.Pages.Manage.Users
 {
     public class Create : PageModel
     {
         private readonly ILogger<Create> _logger;
-        private readonly IEntityService _entityService;
+        private readonly IUserService _userService;
         [BindProperty]
         public ViewModel Data { get; set; }
-        public Create(ILogger<Create> logger, IEntityService entityService)
+        public Create(ILogger<Create> logger, IUserService userService)
         {
             _logger = logger;
-            _entityService = entityService;
+            _userService = userService;
 
             Data = Data ?? new ViewModel();
         }
